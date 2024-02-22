@@ -15,8 +15,7 @@
 		<script src="build/js/MetroUI-2.1.js"></script>
 		<script src="build/js/MetroUI.Win10.js"></script>
 		<script src="build/js/swiper.min.js"></script>
-		<script src="build/js/Bridge.d.ts"></script>
-		<script src="build/js/appList.js"></script>
+
 		
 		
 		<script>
@@ -277,6 +276,8 @@
 				<button>Empty my cart</button>
 			</div>
 		</script>
+		<script src="build/js/Bridge.d.ts"></script>
+		<script src="build/js/appList.js"></script>
 		<script>
 			var app = new MetroUI({
 				useLegacyInit: false
@@ -423,7 +424,19 @@
 					window.pivot = undefined;
 				}
 				window.pivot = new MetroUI.Pivot("pivot");
+				
+				console.log("populating apps")
+				const apst = document.getElementById('mainAppList');
+				apst.innerHTML = ''; // Clear existing content
+				applist.forEach(app => {
+					const listItem = document.createElement('li');
+					listItem.textContent = app.label;
+					listItem.addEventListener('click', launchApp(app.packageName));
+					apst.appendChild(listItem);
+				});
 			});
+
+
 			app.onPageInit("splitview", function() {
 				var split = new MetroUI.SplitControl("splitview", {
 					app: app
