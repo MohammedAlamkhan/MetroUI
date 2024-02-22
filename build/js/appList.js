@@ -10,7 +10,17 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(resp => {
         // do something with the list of apps
         applist= resp.apps 
-        Bridge.showToast(JSON.stringify(resp.apps));
+        applist.sort((a, b) => {
+            const labelA = a.label.toLowerCase();
+            const labelB = b.label.toLowerCase();
+            if (labelA < labelB) {
+                return -1;
+            }
+            if (labelA > labelB) {
+                return 1;
+            }
+            return 0;
+        });
     })
 
     // You can write any JavaScript code here that you want to run when the page loads.
