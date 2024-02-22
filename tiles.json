@@ -6,7 +6,7 @@
 			"tiles": [
 				{
 					"size":"small",
-					"href":"pages/phone.html",
+					"href":"javascript:launchApp('com.google.android.dialer');",
 					"label":"Phone"
 				},
 				{

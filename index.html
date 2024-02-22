@@ -181,6 +181,9 @@
 		
 				<div class="menus">
 					<div class="menu tiles menu-active slide-in done" data-menu="index2" data-tiles="index" style="opacity: 1; -webkit-transform: translateX(0px);">
+						<header>
+							<h1>MetroUI</h1>
+						</header>
 						<div class="tile-row">
 							<div class="tile medium" href="pages/playground.html">
 								<p class="label">Playground</p>
@@ -415,9 +418,6 @@
 				}
 			} 
 
-			app.onPageInit("phone", function(){
-				launchApp("com.google.android.dialer")
-			})
 			app.onPageInit("pivot", function() {
 				if (window.pivot) {
 					window.pivot.destroy();
