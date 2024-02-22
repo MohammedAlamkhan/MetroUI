@@ -12,6 +12,15 @@
  * 
  * Released on: April 25, 2015
  */
+
+
+
+
+.custom-app-item {
+    font-size: 300%;
+}
+
+
 div.pivot {
     margin: 0 auto;
     position: absolute;

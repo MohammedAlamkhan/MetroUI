@@ -5,8 +5,6 @@ var applist
 window.onload = function() {
     // Your code here
 
-    Bridge.showToast('Hello, world!');
-
     fetch(Bridge.getAppsURL())
     .then(resp => resp.json())
     .then(resp => {
@@ -16,6 +14,29 @@ window.onload = function() {
     })
     console.log('The HTML page has finished loading.');
     // You can write any JavaScript code here that you want to run when the page loads.
+
+
+    var list = document.getElementById("mainAppList");
+
+    // Iterate over the array and create list items
+    applist.forEach(function(item) {
+        // Create a new list item element
+        var li = document.createElement("li");
+
+        li.classList.add("custom-app-item");
+        // Set the text content of the list item to the current item in the array
+        li.textContent = item.label;
+
+        // Attach an event listener to the list item for the click event
+        li.addEventListener("click", function() {
+            // Call the onItemClick function when the list item is clicked, passing the item name
+            launchApp(item.packageName);
+        });
+
+
+        // Append the list item to the list
+        list.appendChild(li);
+    });
 };
 
 function launchApp(packageName){
