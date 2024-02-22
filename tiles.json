@@ -1,28 +1,53 @@
 {
-	"index": [
+	"index2": [
 		{
-			"type":"square",
+			"type":"bar",
 			"direction":"horizontal",
 			"tiles": [
 				{
 					"size":"small",
-					"href":"javascript:launchApp('com.google.android.dialer');",
-					"label":"Phone"
+					"href":"pages/design_new.html",
+					"label":"Colors"
 				},
 				{
 					"size":"small",
-					"href":"javascript:launchApp('com.google.android.messages');",
-					"label":"Messages"
+					"href":"pages/design_new.html",
+					"label":"Colors"
 				},
 				{
 					"size":"small",
-					"href":"javascript:launchApp('com.google.android.contacts');",
-					"label":"Contacts"
+					"href":"pages/design_new.html",
+					"label":"Colors"
 				},
 				{
 					"size":"small",
-					"href":"javascript:launchApp('com.google.android.gmail');",
-					"label":"Email"
+					"href":"pages/design_new.html",
+					"label":"Colors"
+				}
+			]
+		},
+		{
+			"type":"square",
+			"tiles": [
+				{
+					"size":"small",
+					"href":"pages/design_new.html",
+					"label":"Colors"
+				},
+				{
+					"size":"small",
+					"href":"pages/design_new.html",
+					"label":"Colors"
+				},
+				{
+					"size":"small",
+					"href":"pages/design_new.html",
+					"label":"Colors"
+				},
+				{
+					"size":"small",
+					"href":"pages/design_new.html",
+					"label":"Colors"
 				}
 			]
 		},
@@ -32,73 +57,41 @@
 			"label":"Playground"
 		},
 		{
-			"type":"bar",
-			"direction":"horizontal",
-			"tiles": [
-				{
-					"size":"small",
-					"href":"pages/design_new.html",
-					"label":"Phone"
-				},
-				{
-					"size":"small",
-					"href":"pages/design_new.html",
-					"label":"Messages"
-				},
-				{
-					"size":"small",
-					"href":"pages/design_new.html",
-					"label":"Contacts"
-				},
-				{
-					"size":"small",
-					"href":"pages/design_new.html",
-					"label":"Email"
-				}
-			]
-		},
-		{
-			"size":"normal",
-			"href":"pages/bars.html",
-			"label":"Application Bars"
-		},
-		{
-			"size":"normal",
-			"href":"pages/bars.html",
-			"label":"Application Bars"
-		},
-		{
 			"size":"wide",
 			"href":"pages/bars.html",
 			"label":"Application Bars"
+		},
+		{
+			"size":"large",
+			"label":"Test"
 		}
 	],
-	"index2": [
+	"index": [
 		{
 			"label":"Playground",
 			"icon":"img/tiles/playground.png",
 			"color":"default",
-			"size":"small",
+			"size":"normal",
 			"href":"pages/playground.html"
 		},
 		{
 			"label":"Colors",
 			"icon":"img/tiles/settings.png",
 			"color":"default",
-			"size":"small",
+			"size":"normal",
 			"href":"pages/design_new.html"
 		},
 		{
 			"label":"Application Bars",
 			"icon":"img/tiles/bars.png",
 			"color":"default",
-			"size":"small",
+			"size":"wide",
 			"href":"pages/bars.html"
 		},
 		{
 			"label":"Split View",
 			"color":"default",
-			"size":"small",
+			"size":"normal",
 			"href":"pages/splitview.html"
 		},
 		{
