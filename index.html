@@ -431,7 +431,10 @@
 				applist.forEach(app => {
 					const listItem = document.createElement('li');
 					listItem.textContent = app.label;
-					listItem.addEventListener('click', launchApp(app.packageName));
+					listItem.addEventListener('click', function() {
+						// Call a method when an item is clicked (replace with your method)
+						launchApp(app.packageName);
+					});
 					apst.appendChild(listItem);
 				});
 			});

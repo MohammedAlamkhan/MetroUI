@@ -24,4 +24,3 @@ function launchApp(packageName){
 function getIcon(packageName){
     Bridge.getDefaultAppIconURL(packageName);
 }
-s
