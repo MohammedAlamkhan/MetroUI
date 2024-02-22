@@ -86,182 +86,22 @@
 		</style>
 	</head>
 	<body data-tint-win="very-dark-purple" data-tint-wp="cyan" data-tint-win10="win10-03" data-bg="light" data-bg-wp="dark" ontouchend="">
-<!--
-		<div class="app-controls">
-			<div class="navigate-back hidden"></div>
-			<div class="title">{{title}}</div>
 
-			<div class="minimize"></div>
-			<div class="maximize"></div>
-			<div class="close" style=""></div>
-		</div>
--->
-		<div class="view view-active" id="view-test">
-<!--
-			<img class="view-icon" src="img/AppIcon60x60.png" style="position: absolute;top: 50%;left: 50%;width: 24px;">
-			<p class="view-title" style="position: absolute; top: 50%; left: 50%; line-height: 24px; font-size: 13px; color:#fff">MetroUI Demo</p>
--->
-			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}">
-				<div class="navbar">
-					<header data-menu="index" data-hide-phone="true">
-						<div class="navigate-back"></div>
-						<div class="navbar-media">
-							<i class="icon icon-world"></i>
-						</div>
-						<h1>MetroUI</h1>
-					</header>
-		
-				</div>
-		
-				<div class="menus">
-					<div class="menu tiles" data-menu="index" data-initial-page="index" data-tiles="index">
-						<header>
-							<h1>MetroUI</h1>
-						</header>
-					</div>
-				</div>
-				<div class="pages">
-					<div class="page" data-page="index" data-menu="index" data-landing-page="true">
-						<header data-display-anywhere="true">
-							<h1>Welcome to MetroUI</h1>
-						</header>
-						<div class="content">
-							<h2>Technical Preview 2</h2>
-							<p>This release includes the Windows Phone mode and an experimental Windows 10 theme for both Phone and Desktop modes.</p>
-							<h2>New Features</h2>
-							<ul>
-								<li>Windows Phone mode</li>
-								<li>Windows 10 theme</li>
-								<li>Plugin API</li>
-								<li>New DOM management (currently using Dom7 by iDangerous)</li>
-								<li>Per-page Application Bars</li>
-								<li>Split Views for Windows 10</li>
-								<li>Hubs! Create your own Xbox-like interface!</li>
-								<li>Application controls (minimize, maximize, close)</li>
-								<li>Views: Making Task View possible! (NOTE: The Task View feature is currently for demo purposes only!)</li>
-								<li>Everything not runtime related (Modals etc) is now in a separate subclass of MetroUI</li>
-							</ul>
-							<h2>Fixed</h2>
-							<ul>
-								<li>Various bugs in Navigation and other components</li>
-								<li>Improved transition between Phone and Desktop modes</li>
-								<li>Fixed Phone mode using Desktop code and vice-versa</li>
-							</ul>
-							<h2>Known Issues</h2>
-							<ul>
-								<li>Transition between Phone and Desktop modes is currently not working correctly</li>
-								<li>Desktop mode is visible when using Phone mode in landscape</li>
-								<li>Windows and Search buttons only have visual purpose (Search button activates Task View in Phone Mode)</li>
-								<li>Split View is not working in Windows (Phone) 8 mode</li>
-								<li>Pivot controls are not working in Windows 10 Desktop mode</li>
-								<li>Hubs are not working correctly when using Phone mode</li>
-							</ul>
-						</div>
-					</div>
-				</div>
 	
-				<div class="appbar minimal">
-					<div class="more"></div>
-				</div>
-			</div>
-		</div>
-
 		<div class="view" id="view-test2">
 			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}">
-				<div class="navbar">
-					<header data-menu="index2" data-hide-phone="true">
-						<div class="navigate-back"></div>
-						<div class="navbar-media">
-							<i class="icon icon-world"></i>
-						</div>
-						<h1>MetroUI</h1>
-					</header>
-		
-				</div>
+			
 		
 				<div class="menus">
-					<div class="menu tiles menu-active slide-in done" data-menu="index2" data-tiles="index" style="opacity: 1; -webkit-transform: translateX(0px);">
-						<header>
-							<h1>MetroUI</h1>
-						</header>
-						<div class="tile-row">
-							<div class="tile medium" href="pages/playground.html">
-								<p class="label">Playground</p>
-							</div>
-							<div class="tile medium" href="pages/design_new.html">
-								<p class="label">Colors</p>
-							</div>
-						</div>
-						<div class="tile-row">
-							<div class="tile wide" href="pages/bars.html">
-								<p class="label">Application Bars</p>
-							</div>
-						</div>
-						<div class="tile-row">
-							<div class="tile medium" href="pages/splitview.html">
-								<p class="label">Split View</p>
-							</div>
-							<div class="tile medium" href="pages/pivot.html">
-								<p class="label">Pivot Controls</p>
-							</div>
-						</div>
-						<div class="tile-row">
-							<div class="tile wide" href="pages/hub.html">
-								<p class="label">Hub</p>
-							</div>
-						</div>
+					<div class="menu tiles menu-active slide-in done" data-menu="index" data-tiles="index" style="opacity: 1; -webkit-transform: translateX(0px);">
+						
+						
+		
 					</div>
 				</div>
-				<div class="pages"></div>
+				
 			</div>
 		</div>
-<!--
-		<div class="view" id="view-test3">
-			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}">
-				<div class="pages">
-					<div class="page page-active slide-in" style="display: block">
-						<header data-display-anywhere="true" style="opacity: 1">
-							<h1>View 3</h1>
-						</header>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="view" id="view-test4">
-			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}">
-				<div class="pages">
-					<div class="page page-active slide-in" style="display: block">
-						<header data-display-anywhere="true" style="opacity: 1">
-							<h1>View 4</h1>
-						</header>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="view" id="view-test5">
-			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}">
-				<div class="pages">
-					<div class="page page-active slide-in" style="display: block">
-						<header data-display-anywhere="true" style="opacity: 1">
-							<h1>View 5</h1>
-						</header>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="view" id="view-test6">
-			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}"></div>
-		</div>
-		<div class="view" id="view-test7">
-			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}"></div>
-		</div>
-		<div class="view" id="view-test8">
-			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}"></div>
-		</div>
-		<div class="view" id="view-test9">
-			<div class="view-inner" onclick="if(body.classList.contains('task-view-open')){taskView(this)}"></div>
-		</div>
--->
 
 		<footer class="tablet-">
 			<div class="navigate-back" onclick="if(!$('body').classList.contains('task-view-open')){app.currentView.back()}else{taskView()}"></div>
@@ -270,12 +110,7 @@
 			<div class="task-view" onclick="taskView()"></div>
 		</footer>
 		
-		<script type="text/template" id="context-template">
-			<div class="context-content">
-				<p>All items will be permanently removed from your cart.</p>
-				<button>Empty my cart</button>
-			</div>
-		</script>
+		
 		<script src="build/js/Bridge.d.ts"></script>
 		<script src="build/js/appList.js"></script>
 		<script>
