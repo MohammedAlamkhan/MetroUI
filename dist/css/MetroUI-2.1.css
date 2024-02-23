@@ -1199,7 +1199,10 @@ div.navbar-media p {
     margin-left: 120%;
     width: 400%;
     height: 40px;
-    font-size: xxx-large;
+    font-size: xx-large;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for truncated text */
   }
   div.page.hub div.hub-slide.promo.wide {
     width: calc(200% + 10px);

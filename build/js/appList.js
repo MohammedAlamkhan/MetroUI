@@ -3,7 +3,11 @@
 // Define a function that will run as soon as the HTML page loads
 var applist;
 var hubSection;
-document.addEventListener("DOMContentLoaded", function() {
+var oldapplist;
+document.addEventListener("DOMContentLoaded", getApps);
+
+
+function getApps() {
     // Your code here
     
     fetch(Bridge.getAppsURL())
@@ -31,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         i++
     });
 
+    oldapplist = applist;
 
     let hublist=[];
     applist.forEach(element => {
@@ -54,15 +59,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
    }
    
+   console.log(JSON.stringify(hubSection));
    
   
     
 
     // You can write any JavaScript code here that you want to run when the page loads.
 
-});
+}
+
 
 function launchApp(packageName){
+    console.log(">>>>launching"+ packageName)
     Bridge.requestLaunchApp(packageName);
 }
 

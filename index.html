@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>MetroUI 2.1 Technical Preview 2</title>
+		<script src="build/js/Bridge.d.ts"></script>
+		<script src="build/js/appList.js"></script>
 		<link rel="stylesheet" href="build/css/MetroUI-2.1.css"></link>
 		<link rel="stylesheet" href="build/css/MetroUI.Win10.css"></link>
 
@@ -276,8 +278,7 @@
 				<button>Empty my cart</button>
 			</div>
 		</script>
-		<script src="build/js/Bridge.d.ts"></script>
-		<script src="build/js/appList.js"></script>
+		
 		<script>
 			var app = new MetroUI({
 				useLegacyInit: false
@@ -419,6 +420,7 @@
 			} 
 
 			app.onPageInit("pivot", function() {
+				getApps();
 				if (window.pivot) {
 					window.pivot.destroy();
 					window.pivot = undefined;
@@ -426,17 +428,17 @@
 				window.pivot = new MetroUI.Pivot("pivot");
 				
 				console.log("populating apps")
-				const apst = document.getElementById('mainAppList');
+				const apst = document.getElementById('mainAppList2');
 				apst.innerHTML = ''; // Clear existing content
-				applist.forEach(app => {
+				oldapplist.forEach(app => {
 					const listItem = document.createElement('li');
-					const icon = document.createElement('img'); // Create an img element
-					icon.src = app.iconSrc; // Set the src attribute of the img element to the icon source
-					icon.alt = app.label; // Set the alt attribute of the img element (optional)
-					listItem.appendChild(icon); // Append the img element to the list item
+
+				
 
 					const label = document.createElement('span'); // Create a span element for the label
 					label.textContent = app.label; // Set the text content of the span element
+					//listItem.style.fontSize = '200%';
+					label.style.fontSize = '200%';
 					listItem.appendChild(label); // Append the span element to the list item
 
 					listItem.addEventListener('click', function() {
@@ -455,6 +457,7 @@
 				});
 			});
 			app.onPageInit("hub", function() {
+				getApps();
 				window.hub = new MetroUI.Hub("hub");
 			});
 			window.addEventListener("touchend", function() {

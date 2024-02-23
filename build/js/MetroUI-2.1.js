@@ -2020,6 +2020,10 @@ app.notify = function(title,message,callback) {
 									tileLabel.innerHTML = tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].label;
 									tile.appendChild(tileLabel);
 								}
+
+								
+
+
 	
 								container.appendChild(tile);
 							}
@@ -2106,6 +2110,7 @@ app.notify = function(title,message,callback) {
 									tileLabel.innerHTML = tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].label;
 									tile.appendChild(tileLabel);
 								}
+								
 								container.appendChild(tile);
 	
 								x -= app.tiles.sizes.normal.w + app.tiles.sizes.tileSpace;
@@ -3637,23 +3642,37 @@ function calcPivotSnapPoints(header) {
 							tileCount++;
 						} else if (hubResult.sections[i].items[j].type == "tile detail") {
 							slide.classList.add("detail");
-							tileDetailCount++;
+								tileDetailCount++;
+								let a = hubResult.sections[i].items[j].description;
+
+
+								var tileTitle = document.createElement("p");
+								tileTitle.className = "title";
+								const img = document.createElement('img')
+								
+								// img.src = Bridge.getDefaultAppIconURL(a)
+								// img.className = "app-icon";
+
+								let u = Bridge.getDefaultAppIconURL(a);
+								tile.style.backgroundImage = "url("+u+")";
+								tile.style.backgroundSize = "130%";
+								tile.style.backgroundPosition = "center";
+								tile.style.backgroundRepeat = "no-repeat";
+
+								var tileDesc = document.createElement("p");
+								tileDesc.className = "description";
 							
-							var tileTitle = document.createElement("p");
+								tileDesc.textContent = hubResult.sections[i].items[j].title;
+								
 							
-							tileTitle.className = "title";
-							//tileTitle.textContent="aidhfihf"
-							var tileDesc = document.createElement("p");
-							tileDesc.className = "description";
-							function launchWithParameter(parameter) {
-								return function() {
-									launchFunction(parameter);
-								};
-							}
-							tileDesc.textContent =  launchApp(hubResult.sections[i].items[j].title)
-							tileTitle.onClick = launchWithParameter(hubResult.sections[i].items[j].description)
-							tile.appendChild(tileTitle);
-							tile.appendChild(tileDesc);
+								tileDesc.addEventListener('click', function() {
+									launchApp(a);
+								});
+
+								tile.appendChild(tileTitle);
+								tile.appendChild(tileDesc);
+								// tile.appendChild(img);
+							
 							
 						} else if (hubResult.sections[i].items[j].type == "tile wide") {
 							tileWideCount++;
