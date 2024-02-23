@@ -430,12 +430,21 @@
 				apst.innerHTML = ''; // Clear existing content
 				applist.forEach(app => {
 					const listItem = document.createElement('li');
-					listItem.textContent = app.label;
+					const icon = document.createElement('img'); // Create an img element
+					icon.src = app.iconSrc; // Set the src attribute of the img element to the icon source
+					icon.alt = app.label; // Set the alt attribute of the img element (optional)
+					listItem.appendChild(icon); // Append the img element to the list item
+
+					const label = document.createElement('span'); // Create a span element for the label
+					label.textContent = app.label; // Set the text content of the span element
+					listItem.appendChild(label); // Append the span element to the list item
+
 					listItem.addEventListener('click', function() {
 						// Call a method when an item is clicked (replace with your method)
 						launchApp(app.packageName);
 					});
-					apst.appendChild(listItem);
+
+					apst.appendChild(listItem); // Append the list item to the parent element
 				});
 			});
 
