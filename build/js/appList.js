@@ -30,6 +30,33 @@ document.addEventListener("DOMContentLoaded", function() {
         i++
     });
 
+
+    let hublist=[];
+    applist.forEach(element => {
+        hublist.push(
+            {
+                "type":"tile detail",
+                "title":element.label,
+                "description": element.packageName,
+            }
+        )
+    });
+
+   let hubSection = {
+    "hubs":{
+        "title":"Hub Control Demo",
+        "sections": [ {
+            "title":"All Apps",
+            "id":"allapps",
+            "items": hublist
+            }]
+    }
+   }
+   
+   
+  
+    
+
     // You can write any JavaScript code here that you want to run when the page loads.
 
 });

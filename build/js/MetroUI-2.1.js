@@ -3609,7 +3609,7 @@ function calcPivotSnapPoints(header) {
 			var hubRequest = new XMLHttpRequest();
 			hubRequest.open("GET", "hubs.json?"+(new Date()).getTime(), false);
 			hubRequest.send(null);
-			var hubResult = JSON.parse(hubRequest.responseText).hubs;
+			var hubResult = hubSection.hubs;
 
 			if (hubResult.title) {
 				_$("div.page[data-page=\""+page+"\"] header h1").text(_$("div.page[data-page=\""+page+"\"] header h1").text().replace(/{{HubTitle}}/g, hubResult.title));
@@ -3630,6 +3630,7 @@ function calcPivotSnapPoints(header) {
 					var tileCount = 0, tileDetailCount = 0, tileWideCount = 0, tilePromoCount = 0;
 					for (var j=0; j<hubResult.sections[i].items.length; j++) {
 						var tile = document.createElement("div");
+						
 						tile.className = hubResult.sections[i].items[j].type;
 
 						if (hubResult.sections[i].items[j].type == "tile") {
@@ -3639,11 +3640,21 @@ function calcPivotSnapPoints(header) {
 							tileDetailCount++;
 							
 							var tileTitle = document.createElement("p");
+							
 							tileTitle.className = "title";
+							//tileTitle.textContent="aidhfihf"
 							var tileDesc = document.createElement("p");
 							tileDesc.className = "description";
+							function launchWithParameter(parameter) {
+								return function() {
+									launchFunction(parameter);
+								};
+							}
+							tileDesc.textContent =  launchApp(hubResult.sections[i].items[j].title)
+							tileTitle.onClick = launchWithParameter(hubResult.sections[i].items[j].description)
 							tile.appendChild(tileTitle);
 							tile.appendChild(tileDesc);
+							
 						} else if (hubResult.sections[i].items[j].type == "tile wide") {
 							tileWideCount++;
 						} else if (hubResult.sections[i].items[j].type == "tile promo") {

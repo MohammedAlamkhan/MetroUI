@@ -1176,7 +1176,7 @@ div.navbar-media p {
     display: block;
   }
   div.page.hub div.tile.detail {
-    width: calc(25% - 10px);
+    width: calc(20% - 10px);
     float: left;
     margin-right: 75%;
   }
@@ -1195,10 +1195,11 @@ div.navbar-media p {
   div.page.hub div.tile.detail p.description {
     position: absolute;
     margin: 0;
-    margin-top: -40px;
-    margin-left: 25%;
-    width: 75%;
+    margin-top: -100%;
+    margin-left: 120%;
+    width: 400%;
     height: 40px;
+    font-size: xxx-large;
   }
   div.page.hub div.hub-slide.promo.wide {
     width: calc(200% + 10px);
