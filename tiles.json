@@ -5,11 +5,9 @@
 			"direction": "horizontal",
 			"tiles": [
 				{
-					"label": "Playground",
-					"icon": "img/tiles/playground.png",
-					"color": "default",
-					"size": "small",
-					"href": "pages/playground.html"
+					"size":"small",
+					"href":"pages/phone.html",
+					"label":"Phone"
 				},
 				{
 					"label": "Colors",

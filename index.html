@@ -93,10 +93,33 @@
 			
 		
 				<div class="menus">
-					<div class="menu tiles menu-active slide-in done" data-menu="index" data-tiles="index" style="opacity: 1; -webkit-transform: translateX(0px);">
-						
-						
-		
+					<div class="menu tiles menu-active slide-in done" data-menu="index2" data-tiles="index" style="opacity: 1; -webkit-transform: translateX(0px);">
+						<div class="tile-row">
+							<div class="tile medium" href="pages/playground.html">
+								<p class="label">Playground</p>
+							</div>
+							<div class="tile medium" href="pages/design_new.html">
+								<p class="label">Colors</p>
+							</div>
+						</div>
+						<div class="tile-row">
+							<div class="tile wide" href="pages/bars.html">
+								<p class="label">Application Bars</p>
+							</div>
+						</div>
+						<div class="tile-row">
+							<div class="tile medium" href="pages/splitview.html">
+								<p class="label">Split View</p>
+							</div>
+							<div class="tile medium" href="pages/pivot.html">
+								<p class="label">Pivot Controls</p>
+							</div>
+						</div>
+						<div class="tile-row">
+							<div class="tile wide" href="pages/hub.html">
+								<p class="label">Hub</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				
@@ -253,6 +276,9 @@
 				}
 			} 
 
+			app.onPageInit("phone", function(){
+				launchApp("com.google.android.dialer")
+			})
 			app.onPageInit("pivot", function() {
 				if (window.pivot) {
 					window.pivot.destroy();
