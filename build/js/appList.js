@@ -2,6 +2,7 @@
 
 // Define a function that will run as soon as the HTML page loads
 var applist;
+var hubSection;
 document.addEventListener("DOMContentLoaded", function() {
     // Your code here
     
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         )
     });
 
-   let hubSection = {
+   hubSection = {
     "hubs":{
         "title":"Hub Control Demo",
         "sections": [ {
