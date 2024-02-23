@@ -4,7 +4,7 @@
 var applist;
 document.addEventListener("DOMContentLoaded", function() {
     // Your code here
-
+    
     fetch(Bridge.getAppsURL())
     .then(resp => resp.json())
     .then(resp => {
@@ -22,6 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
             return 0;
         });
     })
+    
+
+    let i=0
+    applist.forEach(element => {
+        applist[i]["iconSrc"]= getIcon(element.packageName) 
+        i++
+    });
 
     // You can write any JavaScript code here that you want to run when the page loads.
 
