@@ -67,6 +67,16 @@
 									tileLabel.innerHTML = tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].label;
 									tile.appendChild(tileLabel);
 								}
+
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].functionName) {
+									
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].parameters));
+									
+								}
 	
 								container.appendChild(tile);
 							}
@@ -94,6 +104,15 @@
 									tileLabel.className = "label";
 									tileLabel.innerHTML = tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].label;
 									tile.appendChild(tileLabel);
+								}
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].functionName) {
+									
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].parameters));
+									
 								}
 								tileContainer.appendChild(tile);
 							}
@@ -125,6 +144,15 @@
 									tileLabel.innerHTML = tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].label;
 									tile.appendChild(tileLabel);
 								}
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName) {
+
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters));
+									
+								}
 								container.appendChild(tile);
 	
 								y -= app.tiles.sizes.small.h + app.tiles.sizes.tileSpace;
@@ -153,6 +181,15 @@
 									tileLabel.innerHTML = tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].label;
 									tile.appendChild(tileLabel);
 								}
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName) {
+
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters));
+									
+								}
 								container.appendChild(tile);
 	
 								x -= app.tiles.sizes.normal.w + app.tiles.sizes.tileSpace;
@@ -177,6 +214,15 @@
 									tileLabel.innerHTML = tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].label;
 									tile.appendChild(tileLabel);
 								}
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName) {
+
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters));
+									
+								}
 								container.appendChild(tile);
 	
 								//x -= app.tiles.sizes.wide.w;
@@ -199,6 +245,15 @@
 									tileLabel.className = "label";
 									tileLabel.innerHTML = tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].label;
 									tile.appendChild(tileLabel);
+								}
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName) {
+
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters));
+									
 								}
 								container.appendChild(tile);
 	

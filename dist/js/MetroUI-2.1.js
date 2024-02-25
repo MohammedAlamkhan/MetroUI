@@ -2096,7 +2096,7 @@ app.notify = function(title,message,callback) {
 
 								var tile = document.createElement("div");
 								tile.className = "tile medium";
-
+								
 								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href) {
 									tile.setAttribute("href", tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href);
 								}

@@ -2010,6 +2010,22 @@ app.notify = function(title,message,callback) {
 							for (var j=0; j<tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles.length; j++) {
 								var tile = document.createElement("div");
 								tile.className = "tile small";
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].functionName) {
+
+
+									let u = Bridge.getDefaultAppIconURL(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].parameters);
+									tile.style.backgroundImage = "url("+u+")";
+									tile.style.backgroundSize = "130%";
+									tile.style.backgroundPosition = "center";
+									tile.style.backgroundRepeat = "no-repeat";
+
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].parameters));
+									
+								}
 								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].href) {
 									tile.setAttribute("href", tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].href);
 								}
@@ -2043,6 +2059,23 @@ app.notify = function(title,message,callback) {
 							for (var j=0; j<tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles.length; j++) {
 								var tile = document.createElement("div");
 								tile.className = "tile small";
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].functionName) {
+
+
+									let u = Bridge.getDefaultAppIconURL(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].parameters);
+									tile.style.backgroundImage = "url("+u+")";
+									tile.style.backgroundSize = "130%";
+									tile.style.backgroundPosition = "center";
+									tile.style.backgroundRepeat = "no-repeat";
+
+
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].parameters));
+									
+								}
 								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].href) {
 									tile.setAttribute("href", tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].tiles[j].href);
 								}
@@ -2072,7 +2105,20 @@ app.notify = function(title,message,callback) {
 	
 								var tile = document.createElement("div");
 								tile.className = "tile small";
-	
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName) {
+
+									let u = Bridge.getDefaultAppIconURL(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters);
+									tile.style.backgroundImage = "url("+u+")";
+									tile.style.backgroundSize = "130%";
+									tile.style.backgroundPosition = "center";
+									tile.style.backgroundRepeat = "no-repeat";
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters));
+									
+								}
 								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href) {
 									tile.setAttribute("href", tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href);
 								}
@@ -2100,7 +2146,22 @@ app.notify = function(title,message,callback) {
 	
 								var tile = document.createElement("div");
 								tile.className = "tile medium";
-	
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName) {
+
+									let u = Bridge.getDefaultAppIconURL(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters);
+									tile.style.backgroundImage = "url("+u+")";
+									tile.style.backgroundSize = "130%";
+									tile.style.backgroundPosition = "center";
+									tile.style.backgroundRepeat = "no-repeat";
+
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters));
+									
+								}
+
 								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href) {
 									tile.setAttribute("href", tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href);
 								}
@@ -2126,6 +2187,21 @@ app.notify = function(title,message,callback) {
 	
 								var tile = document.createElement("div");
 								tile.className = "tile wide";
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName) {
+
+									let u = Bridge.getDefaultAppIconURL(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters);
+									tile.style.backgroundImage = "url("+u+")";
+									tile.style.backgroundSize = "130%";
+									tile.style.backgroundPosition = "center";
+									tile.style.backgroundRepeat = "no-repeat";
+									
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters));
+									
+								}
 								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href) {
 									tile.setAttribute("href", tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href);
 								}
@@ -2149,6 +2225,21 @@ app.notify = function(title,message,callback) {
 	
 								var tile = document.createElement("div");
 								tile.className = "tile large";
+								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName) {
+
+									let u = Bridge.getDefaultAppIconURL(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters);
+									tile.style.backgroundImage = "url("+u+")";
+									tile.style.backgroundSize = "130%";
+									tile.style.backgroundPosition = "center";
+									tile.style.backgroundRepeat = "no-repeat";
+									
+									tile.addEventListener('click', function(func, params) {
+										return function() {
+											window[func](params);
+										};
+									}(tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].functionName, tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].parameters));
+									
+								}
 								if (tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href) {
 									tile.setAttribute("href", tilesResult[$("div.menu[data-menu=\""+menu+"\"]").getAttribute("data-tiles")][i].href);
 								}
@@ -3648,11 +3739,9 @@ function calcPivotSnapPoints(header) {
 
 								var tileTitle = document.createElement("p");
 								tileTitle.className = "title";
-								const img = document.createElement('img')
 								
-								// img.src = Bridge.getDefaultAppIconURL(a)
-								// img.className = "app-icon";
 
+								//icon on tile
 								let u = Bridge.getDefaultAppIconURL(a);
 								tile.style.backgroundImage = "url("+u+")";
 								tile.style.backgroundSize = "130%";

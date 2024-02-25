@@ -68,11 +68,16 @@ function getApps() {
 
 }
 
-
-function launchApp(packageName){
-    console.log(">>>>launching"+ packageName)
-    Bridge.requestLaunchApp(packageName);
+function launchApp(packageName) {
+    console.log(">>>>launching " + packageName);
+    setTimeout(function() {
+        Bridge.requestLaunchApp(packageName);
+    }, 1500); // 1000 milliseconds = 1 second
+    setTimeout(function() {
+        app.currentView.back()
+    }, 3500); // 1000 milliseconds = 1 second
 }
+
 
 function getIcon(packageName){
     Bridge.getDefaultAppIconURL(packageName);
